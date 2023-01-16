@@ -74,6 +74,7 @@ command + K
 
 Querying document with condition
 --------------------------------------
+
 Greater than or less than
 ```
 db.collectionName.find({field: {$lte: value1}, field: {$gte: value2}})
