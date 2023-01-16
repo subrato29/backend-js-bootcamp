@@ -31,6 +31,8 @@ db.createCollection("employee");
 Inserting documents inside a collections
 ```
 db.collectionName.insert({key1: value1}, {key2: value2});
+db.collectionName.insertOne({}) // Inserting single document
+db.collectionName.insertMany({}) // Inserting multiple document
 
 ```
 
@@ -55,4 +57,17 @@ db.collectionName.find({`specificKey`: `value`})
 To count total no records/documents
 ```
 db.collectionName.count();
+
+```
+
+To come out of mongoDB server
+```
+quit()
+
+```
+
+To clear console in mongoDB
+```
+command + K
+
 ```
