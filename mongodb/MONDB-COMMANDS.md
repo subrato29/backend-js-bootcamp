@@ -72,14 +72,16 @@ command + K
 
 ```
 
-Querying document with condition
---------------------------------------
+CRUD
+--------------
+
+- Querying document with condition
 
 Greater than or less than
 ```
 db.collectionName.find({field: {$lte: value1}, field: {$gte: value2}})
-- $lte => less than
-- $gte => greater than
+- $lte => less than equal
+- $gte => greater than equal
 
 e.g.
 db.tours.find({price: {$lte: 500}, rating: {$gte: 4.2}})
@@ -93,4 +95,27 @@ db.collectionName.find({ $or: [ {field1: {$lte: value1}}, {field2: {$gte: value2
 e.g.
 db.tours.find({ $or: [ {price: {$lte: 500}}, {rating: {$gte: 4.8}}]})
 
+```
+
+- Update
+```
+- updateOne
+- updateMany
+- set keyword is used to modify document or add new document
+- db.collectionName.updateMany();
+
+e.g.
+db.tours.updateMany({price: {$lte: 500}, rating: {$gte: 4.0}}, { $set: {premium: true}})
+
+```
+
+- Delete
+```
+- deleteMany
+- db.tours.deleteMany();
+- Delete All
+    - db.tours.deleteMany({});
+
+e.g.
+db.tours.deleteMany({rating: {$lte: 3.5}})
 ```
