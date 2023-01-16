@@ -119,3 +119,10 @@ db.tours.updateMany({price: {$lte: 500}, rating: {$gte: 4.0}}, { $set: {premium:
 e.g.
 db.tours.deleteMany({rating: {$lte: 3.5}})
 ```
+
+MongoDB Compass
+------------------------
+```
+Easily explore and manipulate your database with Compass, the GUI for MongoDB.
+
+```
