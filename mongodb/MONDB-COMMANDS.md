@@ -71,3 +71,25 @@ To clear console in mongoDB
 command + K
 
 ```
+
+Querying document with condition
+--------------------------------------
+Greater than or less than
+```
+db.collectionName.find({field: {$lte: value1}, field: {$gte: value2}})
+- $lte => less than
+- $gte => greater than
+
+e.g.
+db.tours.find({price: {$lte: 500}, rating: {$gte: 4.2}})
+
+```
+
+OR
+```
+db.collectionName.find({ $or: [ {field1: {$lte: value1}}, {field2: {$gte: value2}}]})
+
+e.g.
+db.tours.find({ $or: [ {price: {$lte: 500}}, {rating: {$gte: 4.8}}]})
+
+```
