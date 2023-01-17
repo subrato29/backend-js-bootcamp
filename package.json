@@ -1,7 +1,7 @@
 {
   "name": "backend-js-bootcamp",
   "version": "1.0.0",
-  "description": "backend-js-bootcamp",
+  "description": "Backend, API, Node, MongoDB",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/subrato29/backend-js-bootcamp/issues"
   },
-  "homepage": "https://github.com/subrato29/backend-js-bootcamp#readme"
+  "homepage": "https://github.com/subrato29/backend-js-bootcamp#readme",
+  "dependencies": {
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
