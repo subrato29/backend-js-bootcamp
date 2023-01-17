@@ -1,6 +1,16 @@
 MongoDB important commands
 ===========================
 
+What is MongoDB
+```
+MongoDB is an open-source document-oriented database that is the most popular NoSQL database. 
+‘NoSQL’ stands for ‘non-relational’. It indicates that MongoDB isn’t built on the table-like 
+structure of relational databases, but instead uses a completely different technique for 
+data storing and retrieval. 
+BSON is the name of the storage format (similar to JSON format).
+
+```
+
 Displaying list of db
 ```
 show dbs
@@ -125,4 +135,5 @@ MongoDB Compass
 ```
 Easily explore and manipulate your database with Compass, the GUI for MongoDB.
 
+Download link: https://www.mongodb.com/try/download/shell
 ```
