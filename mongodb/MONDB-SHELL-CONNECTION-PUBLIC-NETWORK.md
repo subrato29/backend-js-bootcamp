@@ -1,4 +1,4 @@
-Connect to MongoDB Shell from a public n/w
+Connect to MongoDB Shell deployed in public n/w
 ==============================================
 
 Connection String

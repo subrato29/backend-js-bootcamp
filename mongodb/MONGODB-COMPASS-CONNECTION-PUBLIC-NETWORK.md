@@ -1,4 +1,4 @@
-Connect to MongoDB Compass from public n/w
+Connect to MongoDB Compass deployed in public n/w
 ===============================================
 
 link
