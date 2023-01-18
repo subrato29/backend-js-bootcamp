@@ -14,7 +14,6 @@ What is `slugify`
 ```
 `slugify` is the unique identifying part of a web address, typically at the end of the URL.
 
-usage
 var slugify = require('slugify')
 
 slugify('some string', {
