@@ -40,33 +40,33 @@ db.createCollection("employee");
 
 Inserting documents inside a collections
 ```
-db.collectionName.insert({key1: value1}, {key2: value2});
-db.collectionName.insertOne({}) // Inserting single document
-db.collectionName.insertMany({}) // Inserting multiple document
+db.`collectionName`.insert({key1: value1}, {key2: value2});
+db.`collectionName`.insertOne({}) // Inserting single document
+db.`collectionName`.insertMany({}) // Inserting multiple document
 
 ```
 
 To see the total no of records(documents) inserted
 ```
-db.collectionName.find();
+db.`collectionName`.find();
 
 ```
 
 To show a db in pretty format
 ```
-db.collectionName.find().pretty();
+db.`collectionName`.find().pretty();
 
 ```
 
 To fetch a particular record/document
 ```
-db.collectionName.find({`specificKey`: `value`})
+db.`collectionName`.find({`specificKey`: `value`})
 
 ```
 
 To count total no records/documents
 ```
-db.collectionName.count();
+db.`collectionName`.count();
 
 ```
 
@@ -89,7 +89,7 @@ CRUD
 
 Greater than or less than
 ```
-db.collectionName.find({field: {$lte: value1}, field: {$gte: value2}})
+db.`collectionName`.find({field: {$lte: value1}, field: {$gte: value2}})
 - $lte => less than equal
 - $gte => greater than equal
 
@@ -100,7 +100,7 @@ db.tours.find({price: {$lte: 500}, rating: {$gte: 4.2}})
 
 OR
 ```
-db.collectionName.find({ $or: [ {field1: {$lte: value1}}, {field2: {$gte: value2}}]})
+db.`collectionName`.find({ $or: [ {field1: {$lte: value1}}, {field2: {$gte: value2}}]})
 
 e.g.
 db.tours.find({ $or: [ {price: {$lte: 500}}, {rating: {$gte: 4.8}}]})
@@ -112,7 +112,7 @@ db.tours.find({ $or: [ {price: {$lte: 500}}, {rating: {$gte: 4.8}}]})
 - updateOne
 - updateMany
 - set keyword is used to modify document or add new document
-- db.collectionName.updateMany();
+- db.`collectionName`.updateMany();
 
 e.g.
 db.tours.updateMany({price: {$lte: 500}, rating: {$gte: 4.0}}, { $set: {premium: true}})
@@ -122,7 +122,7 @@ db.tours.updateMany({price: {$lte: 500}, rating: {$gte: 4.0}}, { $set: {premium:
 - Delete
 ```
 - deleteMany
-- db.tours.deleteMany();
+- db.`collectionName`.deleteMany();
 - Delete All
     - db.tours.deleteMany({});
 
