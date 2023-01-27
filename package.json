@@ -4,7 +4,7 @@
   "description": "Backend, API, Node, MongoDB",
   "main": "index.js",
   "scripts": {
-    "node": "cd node && nodemon index.js",
+    "node": "cd nodeJS && nodemon index.js",
     "async": "cd asynchronous-js && nodemon index.js",
     "api": "cd building-api && nodemon app.js"
   },
