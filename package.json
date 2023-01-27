@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "node": "cd node && nodemon index.js",
-    "async": "cd asynchronous-js && nodemon index.js"
+    "async": "cd asynchronous-js && nodemon index.js",
+    "api": "cd building-api && nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/subrato29/backend-js-bootcamp#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "slugify": "^1.6.5",
     "superagent": "^8.0.8"
   },
