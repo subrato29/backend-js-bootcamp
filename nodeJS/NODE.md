@@ -11,7 +11,7 @@ What is `node.js`
 How to write code in console
 ```
 - type `node`
-- to come out or exit: control + D 
+- to come out or exit: control + D or .exit
 
 ```
 
