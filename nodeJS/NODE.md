@@ -12,6 +12,8 @@ How to write code in console
 ```
 - type `node`
 - to come out or exit: control + D or .exit
+- to clear out console in node: `cmd + K`
+- By hitting `tab`, you can all the global varible inside `node`
 
 ```
 
