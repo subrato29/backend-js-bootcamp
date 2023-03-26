@@ -1,9 +1,8 @@
-const fs = require('fs');
+const fs = require('fs') // 'fs' stands for file system
 
-const textIn = fs.readFileSync('./txt/input.txt', 'utf-8')
-console.log(textIn);
+const txtIn = fs.readFileSync('./txt/input.txt', 'utf-8');
+console.log(txtIn);
 
-const textOut = `${textIn} and ${Date.now()}`;
-console.log(textOut);
-
-fs.writeFileSync('./txt/output.txt', textOut);
+const txtOut = `The output is: ${txtIn}. \nCreated on ${Date.now()}`;
+fs.writeFileSync('./txt/output.txt', txtOut);
+console.log('File written!');
