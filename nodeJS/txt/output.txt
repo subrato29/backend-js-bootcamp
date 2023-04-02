@@ -1,2 +1,2 @@
-The output is: This is node.js bootcamp. 
-Created on 1679853821904
+The output is:
+This is node.js bootcamp
