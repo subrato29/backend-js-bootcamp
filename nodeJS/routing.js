@@ -1,16 +1,17 @@
 'use strict'
 
-const fs = require('fs');
 const http = require('http');
 const url = require('url');
 
-const port = 8000;
+const PORT = 8000;
+const HOST = '127.0.0.1';
 
 const server = http.createServer((req, res) => {
     const pathName = req.url;
-    if (pathName === '/' || pathName === '/overview') {
+
+    if(pathName === '/' || pathName === '/overview') {
         res.end('This is the OVERVIEW');
-    } else if (pathName === '/product') {
+    } else if(pathName === '/product') {
         res.end('This is the PRODUCT');
     } else {
         res.writeHead(404, {
@@ -21,6 +22,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(port, '127.0.0.1', () => {
-    console.log(`Listening to request on port ${port}`);
+server.listen(PORT, HOST, () => {
+    console.log(`Listening to request on port ${PORT}`);
 })
