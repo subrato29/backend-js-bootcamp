@@ -30,7 +30,7 @@ const getResponse = async () => {
     console.log(`The input is: ${data}`)
 
     const res = await superagent.get(
-      `https://gorest.co.in/public/v2/users/${data}`,
+      `https://gorest.co.in/public/v2/users/${data}`
     )
     console.log(res.body.name)
 

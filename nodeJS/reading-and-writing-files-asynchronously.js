@@ -8,7 +8,7 @@ fs.readFile('./txt/input.txt', 'utf-8', (err, data) => {
     'utf-8',
     (err) => {
       console.log('Your file has been written')
-    },
+    }
   )
 })
 console.log('Will read file!')
