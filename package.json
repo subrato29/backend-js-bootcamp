@@ -6,7 +6,8 @@
   "scripts": {
     "node": "cd nodeJS && nodemon index.js",
     "async": "cd asynchronous-js && nodemon index.js",
-    "api": "cd building-api && nodemon app.js"
+    "api": "cd building-api && nodemon app.js",
+    "pretty": "prettier --write \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "superagent": "^8.0.8"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "prettier": "2.8.7"
   }
 }

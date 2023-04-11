@@ -1,27 +1,27 @@
 'use strict'
 
-const http = require('http');
-const url = require('url');
+const http = require('http')
+const url = require('url')
 
-const PORT = 8000;
-const HOST = '127.0.0.1';
+const PORT = 8000
+const HOST = '127.0.0.1'
 
 const server = http.createServer((req, res) => {
-    const pathName = req.url;
+  const pathName = req.url
 
-    if(pathName === '/' || pathName === '/overview') {
-        res.end('This is the OVERVIEW');
-    } else if(pathName === '/product') {
-        res.end('This is the PRODUCT');
-    } else {
-        res.writeHead(404, {
-            'Content-type': 'text/html',
-            'my-own-header': 'hello-world'
-        });
-        res.end('<h1>Page not found!</h1>');
-    }
-});
+  if (pathName === '/' || pathName === '/overview') {
+    res.end('This is the OVERVIEW')
+  } else if (pathName === '/product') {
+    res.end('This is the PRODUCT')
+  } else {
+    res.writeHead(404, {
+      'Content-type': 'text/html',
+      'my-own-header': 'hello-world',
+    })
+    res.end('<h1>Page not found!</h1>')
+  }
+})
 
 server.listen(PORT, HOST, () => {
-    console.log(`Listening to request on port ${PORT}`);
+  console.log(`Listening to request on port ${PORT}`)
 })

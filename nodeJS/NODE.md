@@ -43,3 +43,8 @@ slugify('some string', {
 
 ```
 
+```
+Run the command: `npm run node`
+
+```
+
