@@ -20,13 +20,13 @@ npm outdated
 ## How to update npm packages
 
 ```
-npm update `packageName`
+npm update <packageName>
 
 ```
 
 ## How to remove packages
 
 ```
-npm uninstall `packageName`
+npm uninstall <packageName>
 
 ```
