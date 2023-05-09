@@ -21,6 +21,11 @@ const writeFilePro = (file, data) => {
   })
 }
 
+/**
+ * `await` keyword stop the code until promise is resolved.
+ *  One `await` represent one `promise` and `then()` process.
+ * `async-await` make code synchronized where as the code remains asynchronous behind the scene.
+ */
 const getResponse = async () => {
   try {
     const data = await readFilePro(`${__dirname}/input.txt`)
