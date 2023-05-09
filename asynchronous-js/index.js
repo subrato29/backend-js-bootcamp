@@ -1,4 +1,3 @@
-const { Console } = require('console')
 const fs = require('fs')
 const superagent = require('superagent')
 
@@ -22,18 +21,19 @@ const writeFilePro = (file, data) => {
   })
 }
 
-readFilePro(`${__dirname}/input.txt`)
-  .then((data) => {
-    console.log(`The output is ${data}`)
-    return superagent.get(`${BASEURL}/public/v2/users/${data}`)
-  })
-  .then((res) => {
-    console.log(res.body)
-    return writeFilePro('response.txt', res.body.email)
-  })
-  .then(() => {
-    console.log('The response saved into the file!')
-  })
-  .catch((err) => {
-    console.log(err.message)
-  })
+const getResponse = async () => {
+  try {
+    const data = await readFilePro(`${__dirname}/input.txt`)
+    console.log(`The input is: ${data}`)
+
+    const res = await superagent(`https://gorest.co.in/public/v2/users/${data}`)
+    console.log(res.body.email)
+
+    await writeFilePro('response.txt', res.body.email)
+    console.log('Response message saved')
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+getResponse()
