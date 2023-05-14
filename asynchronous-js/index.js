@@ -33,7 +33,31 @@ const getResponse = async () => {
     console.log('Response message saved')
   } catch (err) {
     console.log(err)
+    throw err
   }
+  return 'HEY DONE!'
 }
 
-getResponse()
+/**
+ * console.log('1')
+  getResponse()
+    .then((x) => {
+      console.log(x)
+      console.log('2')
+    })
+    .catch((err) => {
+      console.log('ERROR')
+      throw err
+    })
+ */
+
+;(async () => {
+  try {
+    console.log('1')
+    const x = await getResponse()
+    console.log(x)
+    console.log('2')
+  } catch (error) {
+    console.log('ERROR')
+  }
+})()
