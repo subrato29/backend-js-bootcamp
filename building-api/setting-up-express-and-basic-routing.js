@@ -9,10 +9,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  res.send('You can post in this enpoint...');
+  res.send('You can post this to the endpoint...');
 });
 
-const port = 3000;
-app.listen(port, () => {
-  console.log(`App running on port ${port}`);
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}`);
 });
